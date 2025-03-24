@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/index.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "PORT": "5002",
+    "MONGODB_URI": "@mongodb_uri",
+    "JWT_SECRET": "@jwt_secret",
+    "JWT_EXPIRE": "30d",
+    "EMAIL_SERVICE": "@email_service",
+    "EMAIL_USERNAME": "@email_username",
+    "EMAIL_PASSWORD": "@email_password",
+    "EMAIL_FROM": "@email_from",
+    "CORS_ORIGIN": "https://rey-portfolio-frontend.vercel.app"
+  }
+} 
